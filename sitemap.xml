@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://gqs666.gq/Gallery/index.html</loc>
+    <loc>http://gqs666.gq/Gallery/wallpaper/index.html</loc>
     
     <lastmod>2020-11-04</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gqs666.gq/Gallery/wallpaper.html</loc>
+    <loc>http://gqs666.gq/Gallery/index.html</loc>
     
     <lastmod>2020-11-04</lastmod>
     
@@ -146,6 +146,13 @@
   </url>
   
   <url>
+    <loc>http://gqs666.gq/categories/idea/</loc>
+    <lastmod>2020-11-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://gqs666.gq/categories/%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/</loc>
     <lastmod>2020-11-04</lastmod>
     <changefreq>daily</changefreq>
@@ -154,13 +161,6 @@
   
   <url>
     <loc>http://gqs666.gq/categories/%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2020-11-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://gqs666.gq/categories/idea/</loc>
     <lastmod>2020-11-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
