@@ -20,7 +20,7 @@
       
         <tags>
             
-            <tag> -git </tag>
+            <tag> git </tag>
             
         </tags>
       
@@ -39,7 +39,7 @@
       
         <tags>
             
-            <tag> -linux </tag>
+            <tag> linux </tag>
             
         </tags>
       
@@ -64,7 +64,9 @@
       
         <tags>
             
-            <tag> -redis -缓存 </tag>
+            <tag> redis </tag>
+            
+            <tag> 缓存 </tag>
             
         </tags>
       
