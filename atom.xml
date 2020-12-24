@@ -3,11 +3,11 @@
   <title>小龚の博客</title>
   
   <subtitle>守破离</subtitle>
-  <link href="http://blog.love996.xyz/atom.xml" rel="self"/>
+  <link href="http://blog.52pq.cn/atom.xml" rel="self"/>
   
-  <link href="http://blog.love996.xyz/"/>
-  <updated>2020-11-12T08:45:43.221Z</updated>
-  <id>http://blog.love996.xyz/</id>
+  <link href="http://blog.52pq.cn/"/>
+  <updated>2020-12-24T11:10:28.664Z</updated>
+  <id>http://blog.52pq.cn/</id>
   
   <author>
     <name>Mr.G</name>
@@ -17,9 +17,33 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>将本地已有的一个项目上传到新建的git仓库的方法</title>
+    <link href="http://blog.52pq.cn/2020/12/24/article07/"/>
+    <id>http://blog.52pq.cn/2020/12/24/article07/</id>
+    <published>2020-12-24T11:04:22.000Z</published>
+    <updated>2020-12-24T11:10:28.664Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>将本地已有的一个非git项目上传到新建的git仓库的方法一共有两种。</p><h2 id="一、-克隆-拷贝"><a href="#一、-克隆-拷贝" class="headerlink" title="一、 克隆+拷贝"></a>一、 克隆+拷贝</h2><p>第一种方法比较简单，直接用把远程仓库拉到本地，然后再把自己本地的项目拷贝到仓库中去。然后push到远程仓库上去即可。<strong>此方法适用于本地项目不是一个git仓库的情况。</strong></p><p>具体步骤如下：</p><h4 id="1、首先克隆"><a href="#1、首先克隆" class="headerlink" title="1、首先克隆"></a>1、首先克隆</h4><pre><code>git clone git@github.com:yuanmingchen/tensorflow_study.git</code></pre><h4 id="2、然后复制自己项目的所有文件到刚刚克隆下来的仓库中"><a href="#2、然后复制自己项目的所有文件到刚刚克隆下来的仓库中" class="headerlink" title="2、然后复制自己项目的所有文件到刚刚克隆下来的仓库中"></a>2、然后复制自己项目的所有文件到刚刚克隆下来的仓库中</h4><h4 id="3、最后push到远程仓库上面去："><a href="#3、最后push到远程仓库上面去：" class="headerlink" title="3、最后push到远程仓库上面去："></a>3、最后push到远程仓库上面去：</h4><pre><code>git push -u origin master</code></pre><h2 id="二、-强行合并两个仓库"><a href="#二、-强行合并两个仓库" class="headerlink" title="二、 强行合并两个仓库"></a>二、 强行合并两个仓库</h2><p>第二种方法就是先将本地的项目初始化为一个git仓库，然后再强行合并本地仓库和远程仓库，由于这两个仓库是完全不同的两个仓库，所以直接pull都会报错，需要在pull的时候假加上–allow-unrelated-histories才可以pull成功。<strong>此方法适用于本地项目已经是一个git仓库的情况。</strong></p><p>具体步骤如下：</p><h4 id="1、新建git仓库，将本地项目设置为一个git仓库。如果本地项目已经是一个git仓库了，请跳过这一步。在项目根目录下："><a href="#1、新建git仓库，将本地项目设置为一个git仓库。如果本地项目已经是一个git仓库了，请跳过这一步。在项目根目录下：" class="headerlink" title="1、新建git仓库，将本地项目设置为一个git仓库。如果本地项目已经是一个git仓库了，请跳过这一步。在项目根目录下："></a>1、新建git仓库，将本地项目设置为一个git仓库。如果本地项目已经是一个git仓库了，请跳过这一步。在项目根目录下：</h4><pre><code>git init</code></pre><h4 id="2、把当前目录下的已有文件全部加到刚刚新建的git仓库中："><a href="#2、把当前目录下的已有文件全部加到刚刚新建的git仓库中：" class="headerlink" title="2、把当前目录下的已有文件全部加到刚刚新建的git仓库中："></a>2、把当前目录下的已有文件全部加到刚刚新建的git仓库中：</h4><pre><code>git add .</code></pre><h4 id="3、保存刚刚加入的文件，并书写保存信息："><a href="#3、保存刚刚加入的文件，并书写保存信息：" class="headerlink" title="3、保存刚刚加入的文件，并书写保存信息："></a>3、保存刚刚加入的文件，并书写保存信息：</h4><pre><code>git commit -m &quot;push current files&quot;</code></pre><h4 id="4、将本地仓库与远程仓库关联起来："><a href="#4、将本地仓库与远程仓库关联起来：" class="headerlink" title="4、将本地仓库与远程仓库关联起来："></a>4、将本地仓库与远程仓库关联起来：</h4><pre><code>git remote add origin git@github.com:yuanmingchen/tensorflow_study.git</code></pre><h4 id="5、pull远程仓库的内容，更新本地仓库，使用–allow-unrelated-histories忽略本地仓库和远程仓库的无关性，强行合并（关键）："><a href="#5、pull远程仓库的内容，更新本地仓库，使用–allow-unrelated-histories忽略本地仓库和远程仓库的无关性，强行合并（关键）：" class="headerlink" title="5、pull远程仓库的内容，更新本地仓库，使用–allow-unrelated-histories忽略本地仓库和远程仓库的无关性，强行合并（关键）："></a>5、pull远程仓库的内容，更新本地仓库，使用–allow-unrelated-histories忽略本地仓库和远程仓库的无关性，强行合并（关键）：</h4><pre><code>git pull origin master --allow-unrelated-histories</code></pre><h4 id="6、把本地仓库的内容push到远程仓库："><a href="#6、把本地仓库的内容push到远程仓库：" class="headerlink" title="6、把本地仓库的内容push到远程仓库："></a>6、把本地仓库的内容push到远程仓库：</h4><pre><code>git push -u origin master</code></pre><p>然后就ok</p><hr><h2 id="三、其他git命令"><a href="#三、其他git命令" class="headerlink" title="三、其他git命令"></a>三、其他git命令</h2><p>最后附上git的一些其他命令：<br>1、删除已将关联的远程主机</p><pre><code>git remote rm origin</code></pre><p>2、查看所有本地分支</p><pre><code>git branch -a</code></pre><p>3、新建一个分支，名字叫xf</p><pre><code>git branch xf</code></pre><p>4、切换分支到xf分支</p><pre><code>git checkout xf</code></pre><p>5、把远程分支的代码pull到本地分支：git pull &lt;远程主机名&gt; &lt;远程分支名&gt;:&lt;本地分支名&gt;<br>如：取回origin主机的master分支，与本地的xf分支合并，输入命令：</p><pre><code>git pull origin master:xf</code></pre><p>6、推送当前的分支，git push &lt;远程主机名&gt; &lt;本地分支名&gt;:&lt;远程分支名&gt;<br>PS:注意，分支推送顺序的写法是&lt;来源地&gt;:&lt;目的地&gt;，所以git pull是&lt;远程分支&gt;:&lt;本地分支&gt;，而git push是&lt;本地分支&gt;:&lt;远程分支&gt;。<br>如：把本地的xf分支推送到origin主机的master分支，输入命令：</p><pre><code>git push origin xf:master</code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="教程" scheme="http://blog.52pq.cn/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="-git" scheme="http://blog.52pq.cn/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Linux系统下一键dd安装Centos6-7、Debian7-10、Ubuntu14-18、Windows等</title>
-    <link href="http://blog.love996.xyz/2020/11/12/article06/"/>
-    <id>http://blog.love996.xyz/2020/11/12/article06/</id>
+    <link href="http://blog.52pq.cn/2020/11/12/article06/"/>
+    <id>http://blog.52pq.cn/2020/11/12/article06/</id>
     <published>2020-11-12T08:44:22.000Z</published>
     <updated>2020-11-12T08:45:43.221Z</updated>
     
@@ -34,14 +58,14 @@
     
     
     
-    <category term="-linux" scheme="http://blog.love996.xyz/tags/linux/"/>
+    <category term="-linux" scheme="http://blog.52pq.cn/tags/linux/"/>
     
   </entry>
   
   <entry>
     <title>redis缓存穿透，缓存击穿，缓存雪崩原因+解决方案</title>
-    <link href="http://blog.love996.xyz/2020/11/12/article05/"/>
-    <id>http://blog.love996.xyz/2020/11/12/article05/</id>
+    <link href="http://blog.52pq.cn/2020/11/12/article05/"/>
+    <id>http://blog.52pq.cn/2020/11/12/article05/</id>
     <published>2020-11-12T03:25:54.000Z</published>
     <updated>2020-11-12T03:28:46.575Z</updated>
     
@@ -55,17 +79,17 @@
     
     
     
-    <category term="redis" scheme="http://blog.love996.xyz/categories/redis/"/>
+    <category term="redis" scheme="http://blog.52pq.cn/categories/redis/"/>
     
     
-    <category term="-redis -缓存" scheme="http://blog.love996.xyz/tags/redis-%E7%BC%93%E5%AD%98/"/>
+    <category term="-redis -缓存" scheme="http://blog.52pq.cn/tags/redis-%E7%BC%93%E5%AD%98/"/>
     
   </entry>
   
   <entry>
     <title>maven项目创建过慢与idea常用快捷键</title>
-    <link href="http://blog.love996.xyz/2020/10/28/article03/"/>
-    <id>http://blog.love996.xyz/2020/10/28/article03/</id>
+    <link href="http://blog.52pq.cn/2020/10/28/article03/"/>
+    <id>http://blog.52pq.cn/2020/10/28/article03/</id>
     <published>2020-10-28T04:31:57.000Z</published>
     <updated>2020-11-05T02:08:47.521Z</updated>
     
@@ -79,19 +103,19 @@
     
     
     
-    <category term="idea" scheme="http://blog.love996.xyz/categories/idea/"/>
+    <category term="idea" scheme="http://blog.52pq.cn/categories/idea/"/>
     
     
-    <category term="idea" scheme="http://blog.love996.xyz/tags/idea/"/>
+    <category term="idea" scheme="http://blog.52pq.cn/tags/idea/"/>
     
-    <category term="maven" scheme="http://blog.love996.xyz/tags/maven/"/>
+    <category term="maven" scheme="http://blog.52pq.cn/tags/maven/"/>
     
   </entry>
   
   <entry>
     <title>IDEA2020版Maven依赖成功导入但任然报错找不到包解决方案</title>
-    <link href="http://blog.love996.xyz/2020/10/27/article01/"/>
-    <id>http://blog.love996.xyz/2020/10/27/article01/</id>
+    <link href="http://blog.52pq.cn/2020/10/27/article01/"/>
+    <id>http://blog.52pq.cn/2020/10/27/article01/</id>
     <published>2020-10-27T04:31:57.000Z</published>
     <updated>2020-11-05T02:08:30.883Z</updated>
     
@@ -105,19 +129,19 @@
     
     
     
-    <category term="遇到的问题" scheme="http://blog.love996.xyz/categories/%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <category term="遇到的问题" scheme="http://blog.52pq.cn/categories/%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/"/>
     
     
-    <category term="idea" scheme="http://blog.love996.xyz/tags/idea/"/>
+    <category term="idea" scheme="http://blog.52pq.cn/tags/idea/"/>
     
-    <category term="maven" scheme="http://blog.love996.xyz/tags/maven/"/>
+    <category term="maven" scheme="http://blog.52pq.cn/tags/maven/"/>
     
   </entry>
   
   <entry>
     <title>一招解决GitHub致命的下载速度</title>
-    <link href="http://blog.love996.xyz/2020/10/21/article04/"/>
-    <id>http://blog.love996.xyz/2020/10/21/article04/</id>
+    <link href="http://blog.52pq.cn/2020/10/21/article04/"/>
+    <id>http://blog.52pq.cn/2020/10/21/article04/</id>
     <published>2020-10-21T01:31:57.000Z</published>
     <updated>2020-11-05T02:09:11.373Z</updated>
     
@@ -131,17 +155,17 @@
     
     
     
-    <category term="教程" scheme="http://blog.love996.xyz/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="http://blog.52pq.cn/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="github" scheme="http://blog.love996.xyz/tags/github/"/>
+    <category term="github" scheme="http://blog.52pq.cn/tags/github/"/>
     
   </entry>
   
   <entry>
     <title>Word转MD文件</title>
-    <link href="http://blog.love996.xyz/2020/10/16/article02/"/>
-    <id>http://blog.love996.xyz/2020/10/16/article02/</id>
+    <link href="http://blog.52pq.cn/2020/10/16/article02/"/>
+    <id>http://blog.52pq.cn/2020/10/16/article02/</id>
     <published>2020-10-16T04:31:57.000Z</published>
     <updated>2020-11-05T02:08:34.773Z</updated>
     
@@ -155,17 +179,17 @@
     
     
     
-    <category term="教程" scheme="http://blog.love996.xyz/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="http://blog.52pq.cn/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="markdown" scheme="http://blog.love996.xyz/tags/markdown/"/>
+    <category term="markdown" scheme="http://blog.52pq.cn/tags/markdown/"/>
     
   </entry>
   
   <entry>
     <title>试Linux端口的连通性的四种方法</title>
-    <link href="http://blog.love996.xyz/2020/09/27/aa/"/>
-    <id>http://blog.love996.xyz/2020/09/27/aa/</id>
+    <link href="http://blog.52pq.cn/2020/09/27/aa/"/>
+    <id>http://blog.52pq.cn/2020/09/27/aa/</id>
     <published>2020-09-27T04:31:57.000Z</published>
     <updated>2020-11-05T02:10:04.693Z</updated>
     
@@ -179,12 +203,12 @@
     
     
     
-    <category term="linux" scheme="http://blog.love996.xyz/categories/linux/"/>
+    <category term="linux" scheme="http://blog.52pq.cn/categories/linux/"/>
     
     
-    <category term="linux" scheme="http://blog.love996.xyz/tags/linux/"/>
+    <category term="linux" scheme="http://blog.52pq.cn/tags/linux/"/>
     
-    <category term="运维" scheme="http://blog.love996.xyz/tags/%E8%BF%90%E7%BB%B4/"/>
+    <category term="运维" scheme="http://blog.52pq.cn/tags/%E8%BF%90%E7%BB%B4/"/>
     
   </entry>
   
