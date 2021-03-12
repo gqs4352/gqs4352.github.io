@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.52pq.cn/2021/03/12/%E8%B6%85%E5%BF%AB%E9%80%9F%E5%AE%9A%E4%BD%8DOOM/</loc>
+    
+    <lastmod>2021-03-12</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.52pq.cn/2020/11/12/article05/</loc>
     
     <lastmod>2020-12-24</lastmod>
@@ -130,7 +137,7 @@
 
   <url>
     <loc>http://blog.52pq.cn/</loc>
-    <lastmod>2020-12-25</lastmod>
+    <lastmod>2021-03-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -138,63 +145,70 @@
   
   <url>
     <loc>http://blog.52pq.cn/tags/markdown/</loc>
-    <lastmod>2020-12-25</lastmod>
+    <lastmod>2021-03-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.52pq.cn/tags/idea/</loc>
-    <lastmod>2020-12-25</lastmod>
+    <lastmod>2021-03-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.52pq.cn/tags/maven/</loc>
-    <lastmod>2020-12-25</lastmod>
+    <lastmod>2021-03-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.52pq.cn/tags/linux/</loc>
-    <lastmod>2020-12-25</lastmod>
+    <lastmod>2021-03-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.52pq.cn/tags/%E8%BF%90%E7%BB%B4/</loc>
-    <lastmod>2020-12-25</lastmod>
+    <lastmod>2021-03-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.52pq.cn/tags/github/</loc>
-    <lastmod>2020-12-25</lastmod>
+    <lastmod>2021-03-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.52pq.cn/tags/redis/</loc>
-    <lastmod>2020-12-25</lastmod>
+    <lastmod>2021-03-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.52pq.cn/tags/%E7%BC%93%E5%AD%98/</loc>
-    <lastmod>2020-12-25</lastmod>
+    <lastmod>2021-03-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.52pq.cn/tags/git/</loc>
-    <lastmod>2020-12-25</lastmod>
+    <lastmod>2021-03-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.52pq.cn/tags/java/</loc>
+    <lastmod>2021-03-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -203,35 +217,35 @@
   
   <url>
     <loc>http://blog.52pq.cn/categories/%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2020-12-25</lastmod>
+    <lastmod>2021-03-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.52pq.cn/categories/%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/</loc>
-    <lastmod>2020-12-25</lastmod>
+    <lastmod>2021-03-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.52pq.cn/categories/linux/</loc>
-    <lastmod>2020-12-25</lastmod>
+    <lastmod>2021-03-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.52pq.cn/categories/idea/</loc>
-    <lastmod>2020-12-25</lastmod>
+    <lastmod>2021-03-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.52pq.cn/categories/redis/</loc>
-    <lastmod>2020-12-25</lastmod>
+    <lastmod>2021-03-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
